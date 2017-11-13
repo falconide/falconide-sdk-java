@@ -8,13 +8,13 @@ import java.util.concurrent.TimeUnit;
 public class FalconideTest {
 	public static void main(String[] args) {
 
-		Falconide falcon = new Falconide("1025af1d951742f02ea114da69aab9a6");  //Unique API key 
+		Falconide falcon = new Falconide("API key");  //Unique API key 
 		//falcon.enableConsoleLogging();
 		falcon.disableConsoleLogging();
 		Email email = new Email();
 
 		email.setEmailContent("EMAIL_CONTENT");  //Content of the email
-		email.setFrom("from@m3m.in");  //FROM ADDRESS like 'Test USER'
+		email.setFrom("FROM_ADDRESS");  //FROM ADDRESS like 'Test USER'
 		email.setFromName("From Name"); //From name
 		//email.setReplyToId("REPLY_ID"); //Reply to Address in the mail
 		email.setSubject("SUBJECT");    //set subject of the email
@@ -24,7 +24,7 @@ public class FalconideTest {
 		//data.addSubstitue("NAME", "ABS"); //Replaces [%NAME%] attibute in n the html content with ABS  
 		
 		data.setXAPIHeader("API123");//Mentions X-API header mentoned ny the use
-		email.addRecipient("prathamesh@pepipost.com", data);
+		email.addRecipient("Recepient Email Address", data);
 
                 //Repeat the steps from line 25 to 44 for another email  
 	
